@@ -1,0 +1,15 @@
+# OSX
+.DS_Store
+
+# IntelliJ
+.idea
+
+# VSCode
+.vscode
+
+# Update
+/update
+
+# Cursor
+.cursorrules
+.cursor

@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: 8080
+    - default: 12080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelZh: 网站端口
@@ -8,7 +8,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 8443
+    - default: 12443
       edit: true
       envKey: PANEL_APP_PORT_HTTPS
       labelZh: HTTPS 端口
@@ -16,3 +16,184 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "https://api.console.dify.ai"
+      edit: true
+      envKey: PANEL_CONSOLE_API_URL
+      labelZh: Console API URL
+      labelEn: Console API URL
+      required: true
+      type: text
+    - default: "https://console.dify.ai"
+      edit: true
+      envKey: PANEL_CONSOLE_WEB_URL
+      labelZh: Console Web URL
+      labelEn: Console Web URL
+      required: true
+      type: text
+    - default: "https://api.dify.ai"
+      edit: true
+      envKey: PANEL_SERVICE_API_URL
+      labelZh: Service API URL
+      labelEn: Service API URL
+      required: true
+      type: text
+    - default: "https://api.app.dify.ai"
+      edit: true
+      envKey: PANEL_APP_API_URL
+      labelZh: App API URL
+      labelEn: App API URL
+      required: true
+      type: text
+    - default: "https://app.dify.ai"
+      edit: true
+      envKey: PANEL_APP_WEB_URL
+      labelZh: App Web URL
+      labelEn: App Web URL
+      required: true
+      type: text
+    - default: "tencent-cos"
+      disabled: true
+      edit: false
+      envKey: PANEL_STORAGE_TYPE
+      labelZh: Storage Type
+      labelEn: Storage Type
+      required: true
+      type: text
+    - default: "your-bucket-name"
+      edit: true
+      envKey: PANEL_TENCENT_COS_BUCKET_NAME
+      labelZh: Tencent COS Bucket Name
+      labelEn: Tencent COS Bucket Name
+      required: true
+      type: text
+    - default: "your-secret-key"
+      edit: true
+      envKey: PANEL_TENCENT_COS_SECRET_KEY
+      labelZh: Tencent COS Secret Key
+      labelEn: Tencent COS Secret Key
+      required: true
+      type: text
+    - default: "your-secret-id"
+      edit: true
+      envKey: PANEL_TENCENT_COS_SECRET_ID
+      labelZh: Tencent COS Secret ID
+      labelEn: Tencent COS Secret ID
+      required: true
+      type: text
+    - default: "your-region"
+      edit: true
+      envKey: PANEL_TENCENT_COS_REGION
+      labelZh: Tencent COS Region
+      labelEn: Tencent COS Region
+      required: true
+      type: text
+    - default: "https"
+      edit: true
+      envKey: PANEL_TENCENT_COS_SCHEME
+      labelZh: Tencent COS Scheme
+      labelEn: Tencent COS Scheme
+      required: true
+      type: text
+    - default: "tencent_cos"
+      disabled: true
+      edit: false
+      envKey: PANEL_PLUGIN_STORAGE_TYPE
+      labelZh: Plugin Storage Type
+      labelEn: Plugin Storage Type
+      required: true
+      type: text
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh: 数据库服务
+        zh-Hant: 數據庫服務
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: db_dify
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh: 数据库名
+        zh-Hant: 數據庫名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: dify
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh: 数据库用户
+        zh-Hant: 數據庫用戶
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: dify
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh: 数据库用户密码
+        zh-Hant: 數據庫用戶密碼
+      random: true
+      required: true
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: redis 服务
+      required: true
+      type: service
+      label:
+        en: Redis Service
+        ja: Redisサービス
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        ko: Redis 서비스
+        zh: redis 服务
+        zh-Hant: redis 服务
+    - default: ""
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Redis Service Password
+      labelZh: 缓存服务服务密码
+      required: false
+      type: password

@@ -184,7 +184,7 @@ additionalProperties:
       type: service
       label:
         en: Redis Service
-        ja: Redisサービス
+        ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
         ru: Сервис Redis

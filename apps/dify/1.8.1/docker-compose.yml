@@ -1352,5 +1352,5 @@ networks:
     internal: true
 
 volumes:
-  oradata:
-  dify_es01_data:
+  oradata: null
+  dify_es01_data: null

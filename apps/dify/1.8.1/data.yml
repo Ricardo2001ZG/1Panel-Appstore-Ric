@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: 12080
+    - default: 3000
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelZh: 网站端口
@@ -8,7 +8,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 12443
+    - default: 3001
       edit: true
       envKey: PANEL_APP_PORT_HTTPS
       labelZh: HTTPS 端口

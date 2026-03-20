@@ -1,0 +1,233 @@
+additionalProperties:
+  formFields:
+    - default: 40247
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "password"
+      edit: true
+      envKey: OPENAI_API_KEY
+      labelEn: OpenAI API Key
+      labelZh: OpenAI API 密钥
+      required: false
+      type: password
+    - default: "https://api.openai.com/v1"
+      edit: true
+      envKey: OPENAI_PROXY_URL
+      labelEn: OpenAI Proxy URL
+      labelZh: OpenAI 代理 URL
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: ACCESS_CODE
+      labelEn: Access Code
+      labelZh: 访问密码
+      random: true
+      required: false
+      rule: paramComplexity 
+      type: password
+    - default: ""
+      edit: true
+      envKey: OPENAI_MODEL_LIST
+      labelEn: OpenAI Model List
+      labelZh: OpenAI 模型列表
+      required: false
+      type: text
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh: 数据库服务
+        zh-Hant: 數據庫服務
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: db_lobechat
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh: 数据库名
+        zh-Hant: 數據庫名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: lobechat
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh: 数据库用户
+        zh-Hant: 數據庫用戶
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: lobechat
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh: 数据库用户密码
+        zh-Hant: 數據庫用戶密碼
+      random: true
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: DEEPSEEK_API_KEY
+      labelEn: Deepseek API Key
+      labelZh: Deepseek API 密钥
+      required: false
+      type: password
+    - default: ""
+      edit: true
+      envKey: DEFAULT_AGENT_CONFIG
+      labelEn: Default Agent Config
+      labelZh: 默认助理配置
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SYSTEM_AGENT
+      labelEn: System Agent
+      labelZh: 默认系统助手
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: APP_URL
+      labelEn: App URL
+      labelZh: 应用 URL
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: KEY_VAULTS_SECRET
+      labelEn: Key Vaults Secret
+      labelZh: 加密密钥变量
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: NEXT_AUTH_SSO_PROVIDERS
+      labelEn: Next Auth SSO Providers
+      labelZh: Next Auth SSO Providers
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: NEXTAUTH_URL
+      labelEn: Next Auth URL
+      labelZh: Next Auth URL
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: NEXT_AUTH_SECRET
+      labelEn: Next Auth Secret
+      labelZh: Next Auth 密钥
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: AUTH_LOGTO_ID
+      labelEn: Auth Logto ID
+      labelZh: Auth Logto ID
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: AUTH_LOGTO_SECRET
+      labelEn: Auth Logto Secret
+      labelZh: Auth Logto 密钥
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: AUTH_LOGTO_ISSUER
+      labelEn: Auth Logto Issuer
+      labelZh: Auth Logto Issuer
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: S3_BUCKET
+      labelEn: S3 Bucket
+      labelZh: S3 Bucket
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: S3_ENDPOINT
+      labelEn: S3 Endpoint
+      labelZh: S3 Endpoint
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: S3_REGION
+      labelEn: S3 Region
+      labelZh: S3 Region
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: S3_PUBLIC_DOMAIN
+      labelEn: S3 Public Domain
+      labelZh: S3 Public Domain
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: S3_ACCESS_KEY_ID
+      labelEn: S3 Access Key ID
+      labelZh: S3 Access Key ID
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: S3_SECRET_ACCESS_KEY
+      labelEn: S3 Secret Access Key
+      labelZh: S3 Secret Access Key
+      required: true
+      type: password
+    

@@ -1,3 +1,4 @@
-[submodule "/Users/ricardo2001zg/Projects/LingMiaoTech/1Panel-WorkSpace/1Panel-Appstore-Ric/docs/appstore.wiki"]
-	path = /Users/ricardo2001zg/Projects/LingMiaoTech/1Panel-WorkSpace/1Panel-Appstore-Ric/docs/appstore.wiki
+[submodule "appstore.wiki"]
+	path = docs/appstore.wiki
 	url = https://github.com/1Panel-dev/appstore.wiki.git
+	branch = master

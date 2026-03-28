@@ -1,0 +1,23 @@
+services:
+  searxng:
+    image: searxng/searxng:2026.3.26-e73442400
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    environment:
+      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME}/
+    volumes:
+      - ./searxng:/etc/searxng:rw
+      - searxng-data:/var/cache/searxng:rw
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
+
+volumes:
+  searxng-data:

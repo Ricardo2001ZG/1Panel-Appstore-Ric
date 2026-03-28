@@ -1,0 +1,22 @@
+name: SearXNG
+tags:
+  - Search
+title: SearXNG - 一个注重隐私的开源元搜索引擎
+description: SearXNG 是一个注重隐私的开源元搜索引擎，旨在保护用户隐私并提供无广告、无追踪的搜索体验。它能够聚合来自多个主流搜索引擎（如 Google、Bing、DuckDuckGo、Baidu 等）的结果，支持自建部署，用户完全掌控自己的搜索数据。
+additionalProperties:
+  key: searxng
+  name: SearXNG
+  tags:
+    - Search
+  shortDescZh: 一个注重隐私的开源元搜索引擎
+  shortDescEn: A privacy-respecting open source metasearch engine
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://searxng.org/
+  github: https://github.com/searxng/searxng
+  document: https://docs.searxng.org/
+  architectures:
+    - amd64
+    - arm64

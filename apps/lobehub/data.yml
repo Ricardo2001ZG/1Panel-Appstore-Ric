@@ -1,0 +1,22 @@
+name: LobeHub
+tags:
+  - AI
+title: LobeHub - 人类与 Agent 共同进化的基础设施
+description: LobeHub 是一个工作与生活空间，用于发现、构建并与会随着您一起成长的 Agent 队友协作。在 LobeHub 中，我们将 Agent 视为工作单元，提供一个让人类与 Agent 共同进化的基础设施。
+additionalProperties:
+  key: lobehub
+  name: LobeHub
+  tags:
+    - AI
+  shortDescZh: LobeHub - 人类与 Agent 共同进化的基础设施
+  shortDescEn: LobeHub - The world's largest human-agent co-evolving network
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://lobehub.com
+  github: https://github.com/lobehub/lobehub
+  document: https://lobehub.com/docs
+  architectures:
+    - amd64
+    - arm64

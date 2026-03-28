@@ -1,0 +1,110 @@
+additionalProperties:
+  formFields:
+    - default: 3210
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: 网站端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: 5432
+      envKey: PANEL_DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: lobehub
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: lobehub
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: lobehub
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramCommon
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: Redis 服务
+      required: true
+      type: service
+    - default: 6379
+      envKey: PANEL_REDIS_PORT
+      labelEn: Redis Port
+      labelZh: Redis 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: lobehub
+      envKey: PANEL_REDIS_PASSWORD
+      labelEn: Redis Password
+      labelZh: Redis 密码
+      random: true
+      required: false
+      type: password
+    - default: lobehub
+      envKey: REDIS_PREFIX
+      labelEn: Redis Prefix
+      labelZh: Redis 前缀
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: KEY_VAULTS_SECRET
+      labelEn: Key Vaults Secret
+      labelZh: 加密密钥变量
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: AUTH_SECRET
+      labelEn: Auth Secret
+      labelZh: 认证密钥
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: JWKS_KEY
+      labelEn: JWKS Key
+      labelZh: JWKS 密钥
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: APP_URL
+      labelEn: App URL
+      labelZh: 应用 URL
+      required: false
+      type: text

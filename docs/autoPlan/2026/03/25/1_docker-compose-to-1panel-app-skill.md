@@ -3,7 +3,7 @@
 ## 任务信息
 - 任务名称：docker-compose-to-1panel-app
 - 今日任务编号：1
-- 日期：_2026-03-25-15-57-06-UTC+8
+- 日期：2026-03-25-15-57-06-UTC+8
 - Context：本次任务需要在项目内新增一个 Claude Code skill，用于将现有的 docker-compose 项目转换为符合 1Panel Apps 规范的应用目录。该 skill 必须遵循本仓库中已有应用的实际组织方式，并参考 `docs/appstore.wiki` 中的说明文档以及 `docs/claudeCodeDocs/zh-CN/skills.md` 中的 skill 规范。最终目标是得到一个项目级可复用的转换 skill，并补齐对应的执行计划文档，便于后续维护和复用。
 
 ## 原始 Prompt
